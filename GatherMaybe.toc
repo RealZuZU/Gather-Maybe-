@@ -1,0 +1,8 @@
+## Interface: 70000
+## Title: |cffC67171GatherMaybe
+## Notes: |cff8B8B83Just want to gather!
+GatherMaybe.lua
+GatherMaybe.xml
+
+Libs\LibStub\LibStub.lua
+Libs\!LibDraw\LibDraw.lua
