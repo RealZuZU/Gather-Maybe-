@@ -37,11 +37,6 @@ function blacklisting(object)
 end
 
 
-SLASH_GATHERM1, SLASH_GATHERM2 = '/gathermaybe', '/gm';
-function handler(msg, editbox)
-	Gather:Show()
-end
-SlashCmdList["GATHERM"] = handler;
 
 
 
@@ -74,7 +69,13 @@ TitleText:SetAllPoints(Title);
 
 TitleText:SetText("Gather Maybe?");
 TitleText:SetJustifyH("CENTER");
+local CloseButton = CreateFrame("Button", nil, Title, "UIPanelCloseButton");
+			CloseButton:SetPoint("TOPRIGHT", -5, 5);
+			CloseButton:SetHeight(18);
+			CloseButton:SetWidth(18);
+			CloseButton:SetScript("OnClick", function () Gather:Hide(); end);
 
+			
 local button = CreateFrame("button","GatherButton", Gather, "UIPanelButtonTemplate")
 button:SetHeight(24)
 button:SetWidth(60)
@@ -119,3 +120,9 @@ l.Enable(0)
 
   end)
 
+  
+  SLASH_GATHERM1, SLASH_GATHERM2 = '/gathermaybe', '/gm';
+function handler(msg, editbox)
+	Gather:Show()
+end
+SlashCmdList["GATHERM"] = handler;

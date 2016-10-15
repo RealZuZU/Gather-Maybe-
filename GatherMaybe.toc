@@ -1,8 +1,6 @@
 ## Interface: 70000
 ## Title: |cffC67171GatherMaybe
 ## Notes: |cff8B8B83Just want to gather!
-## Author: CuteOne
-## Version: 1.2
 Libs\LibStub\LibStub.lua
 Libs\LibDraw\LibDraw.lua
 GatherMaybe.lua
